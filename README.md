@@ -23,7 +23,9 @@ Reason for the project
 Installation
 ------------
 
-1. Ensure that django_db_prefix is importable.
+1. Install using pip:
+
+    pip install git+https://github.com/benslavin/django-db-prefix.git
 
 2. Add django_db_prefix at the top of your INSTALLED_APPS list. It is
    recommended that django_db_prefix is the first listed application, but it
