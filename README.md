@@ -70,7 +70,7 @@ found, no prefix will be added.
    format.
 
 A sample specification:
-::
+
     DB_PREFIX = {
         "foo.bar": "bar_model_prefix",
         "foo.baz": "baz_model_prefix",
