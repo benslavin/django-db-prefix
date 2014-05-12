@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db.models.signals import class_prepared
 
+
 def add_db_prefix(sender, **kwargs):
     prefix = getattr(settings, "DB_PREFIX", None)
     if isinstance(prefix, dict):
@@ -15,4 +16,6 @@ def add_db_prefix(sender, **kwargs):
             prefix = prefix.get(None, None)
     if prefix:
         sender._meta.db_table = prefix + sender._meta.db_table
+
+
 class_prepared.connect(add_db_prefix)
